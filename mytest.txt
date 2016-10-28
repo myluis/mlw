@@ -1,1 +1,2 @@
-This is my first laravel and git hub tutorial file.
+This is my first laravel and git hub tutorial file. I love being a programmer.
+It is good to stay up to date with work.
