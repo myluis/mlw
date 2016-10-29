@@ -1,0 +1,164 @@
+
+user@LAPTOP-5BJRKU8B MINGW64 ~
+$ cd
+
+user@LAPTOP-5BJRKU8B MINGW64 ~
+$ cd /c
+
+user@LAPTOP-5BJRKU8B MINGW64 /c
+$ ls
+'$AVG'/                    eclipse/      PerfLogs/               swapfile.sys                  xampp/
+'$Recycle.Bin'/            hiberfil.sys  'Program Files'/        'System Volume Information'/  ZebraCode/
+bootmgr                    Intel/        'Program Files (x86)'/  Users/
+BOOTNXT                    OEM/          ProgramData/            Windows/
+'Documents and Settings'@  pagefile.sys  Recovery/               Windows10Upgrade/
+
+user@LAPTOP-5BJRKU8B MINGW64 /c
+$ cd ZebraCode
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode
+$ ls
+AllAboutNodeJS/  AllButJava/  AllPythonWork/  git/  W3C-xslt30-test-d3ae5d08c8a6/
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode
+$ cd git
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git
+$ ls
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git
+$ git config --global user.name "myluis"
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git
+$ git config --global user.email ibhluis@gmail.com
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git
+$ git clone https://github.com/myluis/mlw.git
+Cloning into 'mlw'...
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git
+$ ls
+mlw/
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git
+$ cd mlw
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git/mlw (master)
+$ ls
+README.md
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git/mlw (master)
+$ ls
+README.md  test.txt
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git/mlw (master)
+$ ls
+mytest.txt  README.md
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git/mlw (master)
+$ git add mytest.txt
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git/mlw (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   mytest.txt
+
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git/mlw (master)
+$ git commit -m "My test file commit" mytest.text
+error: pathspec 'mytest.text' did not match any file(s) known to git.
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git/mlw (master)
+$ git commit -m "My test file commit" mytest.txt
+[master e56ff01] My test file commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mytest.txt
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git/mlw (master)
+$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 361 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/myluis/mlw.git
+   55ae578..e56ff01  master -> master
+Branch master set up to track remote branch master from origin.
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git/mlw (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   mytest.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git/mlw (master)
+$ git commit -m "Some changes have been made to my test file commit" mytest.txt
+[master 764379c] Some changes have been made to my test file commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git/mlw (master)
+$ git push -m origin master
+error: unknown switch `m'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules[=<check|on-demand|no>]
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=<yes|no|if-asked>]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git/mlw (master)
+$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 366 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/myluis/mlw.git
+   e56ff01..764379c  master -> master
+Branch master set up to track remote branch master from origin.
+
+user@LAPTOP-5BJRKU8B MINGW64 /c/ZebraCode/git/mlw (master)
+$
